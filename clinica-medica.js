@@ -191,12 +191,18 @@ function solicitarDadosPaciente() {
     });
   }
 
+  const fs = require('fs');
   // Função exibir dados da consulta
   function exibirDadosDaConsulta() {
     console.log("Segue os dados da sua consulta: ");
     console.log(`Olá, ${consultaAgendada.paciente.nome}! \n 
     Sua consulta está agendada para ${consultaAgendada.dia} a partir das ${consultaAgendada.horario}H. \n
     Com o(a) Dr(a) ${consultaAgendada.medico.nome}.`);
+
+   // Salvar consultaAgendada em um arquivo JSON
+   const consultaAgendadaJson = JSON.stringify(consultaAgendada, null, 2);
+   fs.writeFileSync('consulta-agendada.json', consultaAgendadaJson);
+   console.log("Consulta agendada salva em consulta-agendada.json");
   }
   
   // Chamar a função para agendar consulta
