@@ -86,3 +86,20 @@ const consultaAgendada = {
   horario: null,
   dia: null,
 };
+
+// Função para solicitar os dados do paciente
+function solicitarDadosPaciente() {
+    return new Promise((resolve, reject) => {
+      rl.question("Digite o nome do paciente: ", (nome) => {
+        Paciente.nome = nome;
+        rl.question("Digite o telefone do paciente: ", (telefone) => {
+          Paciente.telefone = telefone;
+          rl.question("Digite o email do paciente: ", (email) => {
+            Paciente.email = email;
+            consultaAgendada.paciente = Paciente;
+            resolve();
+          });
+        });
+      });
+    });
+  }
