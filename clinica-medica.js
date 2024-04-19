@@ -103,3 +103,16 @@ function solicitarDadosPaciente() {
       });
     });
   }
+
+  // Função agendar consulta
+  function agendarConsulta() {
+    console.log("Olá, Bem-vindo(a) ao sistema de agendamento de consultas");
+    console.log("Para iniciar o agendamento responda as seguintes questões: ");
+    solicitarDadosPaciente().then(() => {
+      console.log(
+        "Obrigado(a) seus dados foram inseridos com sucesso. Vamos seguir com o seu agendamento."
+      );
+      escolherEspecialidade();
+    });
+  }
+  
