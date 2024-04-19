@@ -23,11 +23,11 @@ const Medicos = [
     especialidade: "Cardiologista",
     disponibilidadeDeAtendimento: [
       {
-        dia: "Segunda",
+        dia: "Segunda-feira",
         horario: ["08:00", "10:00"],
       },
       {
-        dia: "Quarta",
+        dia: "Quarta-feira",
         horario: ["10:00", "12:00"],
       },
     ],
@@ -38,11 +38,11 @@ const Medicos = [
     especialidade: "Dermatologista",
     disponibilidadeDeAtendimento: [
       {
-        dia: "Quinta",
+        dia: "Quinta-feira",
         horario: ["08:00", "10:00"],
       },
       {
-        dia: "Sexta",
+        dia: "Sexta-feira",
         horario: ["07:00", "12:00"],
       },
     ],
@@ -53,11 +53,11 @@ const Medicos = [
     especialidade: "Clínico Geral",
     disponibilidadeDeAtendimento: [
       {
-        dia: "Segunda",
+        dia: "Segunda-feira",
         horario: ["08:00", "10:00"],
       },
       {
-        dia: "Terça",
+        dia: "Terça-feira",
         horario: ["10:00", "11:00"],
       },
     ],
@@ -68,11 +68,11 @@ const Medicos = [
     especialidade: "Ortopedista",
     disponibilidadeDeAtendimento: [
       {
-        dia: "Quinta",
+        dia: "Quinta-feira",
         horario: ["09:00", "10:00"],
       },
       {
-        dia: "Sexta",
+        dia: "Sexta-feira",
         horario: ["08:00", "12:00"],
       },
     ],
