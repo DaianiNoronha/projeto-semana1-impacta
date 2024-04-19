@@ -115,4 +115,32 @@ function solicitarDadosPaciente() {
       escolherEspecialidade();
     });
   }
+
+  // Função escolher especialidade
+  function escolherEspecialidade() {
+    console.log("Selecione o número correspondente á especialidade desejada: ");
+    Medicos.map((medico, index) => {
+      console.log(index + " - " + medico.especialidade);
+    });
+  
+    rl.question("Digite o número da especialidade: ", (especialidade) => {
+      const indice = parseInt(especialidade); // converte a entrada para um número
+      if (indice >= 0 && indice < Medicos.length) {
+        // verifica se o índice é válido
+        const medico = Medicos[indice];
+        console.log(
+          " Especialidade escolhida: " +
+            medico.especialidade +
+            " Medico(a): " +
+            medico.nome
+        );
+        consultaAgendada.medico = medico;
+        escolherDiaDaConsulta(medico);
+      } else {
+        console.log("Número inválido. Tente novamente.");
+        escolherEspecialidade();
+      }
+    });
+  }
+  
   
