@@ -190,6 +190,18 @@ function solicitarDadosPaciente() {
       }
     });
   }
+
+  // Função exibir dados da consulta
+  function exibirDadosDaConsulta() {
+    console.log("Segue os dados da sua consulta: ");
+    console.log(`Olá, ${consultaAgendada.paciente.nome}! \n 
+    Sua consulta está agendada para ${consultaAgendada.dia} a partir das ${consultaAgendada.horario}H. \n
+    Com o(a) Dr(a) ${consultaAgendada.medico.nome}.`);
+  }
+  
+  // Chamar a função para agendar consulta
+  agendarConsulta();
+  
   
   
   
