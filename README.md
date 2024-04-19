@@ -22,3 +22,4 @@ Os objetivos desse projeto foi consolidar as habilidades com uso da liguagem Jav
 
 ## 🚀 Tecnologias 
 - JavaScript
+- NodeJS
