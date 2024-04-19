@@ -131,8 +131,8 @@ function solicitarDadosPaciente() {
         console.log(
           " Especialidade escolhida: " +
             medico.especialidade +
-            " Medico(a): " +
-            medico.nome
+            ". Medico(a): " +
+            medico.nome + "."
         );
         consultaAgendada.medico = medico;
         escolherDiaDaConsulta(medico);
