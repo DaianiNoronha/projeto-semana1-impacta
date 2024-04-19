@@ -1,5 +1,5 @@
 <p align= "center">
-<img src="./assets/teste-code.png" alt= "Demonstração do projeto" width= "100%" />
+<img src="https://github.com/DaianiNoronha/projeto-semana1-impacta/blob/master/assets/teste-code.png" alt= "Demonstração do projeto" width= "100%" />
 </p>
 
 ## 🖥️ Projeto
