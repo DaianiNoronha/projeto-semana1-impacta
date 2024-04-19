@@ -201,6 +201,12 @@ function solicitarDadosPaciente() {
   
   // Chamar a função para agendar consulta
   agendarConsulta();
+
+  // rl.close() encerrando sessão
+rl.on("close", () => {
+    console.log("Sessão encerrada. Obrigado por utilizar nosso sistema.");
+    process.exit(0);
+  });
   
   
   
