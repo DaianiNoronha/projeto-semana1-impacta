@@ -1,0 +1,30 @@
+{
+  "paciente": {
+    "nome": "Diana",
+    "telefone": "11934458618",
+    "email": "diana@hotmail.com"
+  },
+  "medico": {
+    "id": 4,
+    "nome": "Ana",
+    "especialidade": "Ortopedista",
+    "disponibilidadeDeAtendimento": [
+      {
+        "dia": "Quinta-feira",
+        "horario": [
+          "09:00",
+          "10:00"
+        ]
+      },
+      {
+        "dia": "Sexta-feira",
+        "horario": [
+          "08:00",
+          "12:00"
+        ]
+      }
+    ]
+  },
+  "horario": "12:00",
+  "dia": "Sexta-feira"
+}
