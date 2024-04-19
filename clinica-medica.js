@@ -169,6 +169,28 @@ function solicitarDadosPaciente() {
       }
     });
   }
+
+  // Função escolher hora da consulta
+  function escolherHoraDaConsulta(horario) {
+    console.log("Horários disponíveis: ");
+    horario.map((horario, index) => {
+      console.log(index + " - " + horario);
+    });
+    rl.question("Digite o horário desejado: ", (hora) => {
+      const indice = parseInt(hora); // converte a entrada para um número
+      if (indice >= 0 && indice < horario.length) {
+        // verifica se o índice é válido
+        console.log("Horário escolhido: " + horario[indice]);
+        consultaAgendada.horario = horario[indice];
+        exibirDadosDaConsulta();
+        rl.close();
+      } else {
+        console.log("Horário inválido. Tente novamente.");
+        escolherHoraDaConsulta(horario);
+      }
+    });
+  }
+  
   
   
   
