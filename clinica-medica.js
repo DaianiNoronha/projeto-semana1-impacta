@@ -142,5 +142,34 @@ function solicitarDadosPaciente() {
       }
     });
   }
+
+  // Função escolher dia da consulta
+  function escolherDiaDaConsulta(medico) {
+    console.log("Selecione o dia e horário para a sua consulta: ");
+    console.log(
+      "Selecione o número correspondente ao dia que você deseja ser atendido(a) "
+    );
+    medico.disponibilidadeDeAtendimento.map((dia, index) => {
+      console.log(index + " - " + dia.dia);
+    });
+    rl.question("Digite o número do dia: ", (dia) => {
+      const indice = parseInt(dia); // converte a entrada para um número
+      if (indice >= 0 && indice < medico.disponibilidadeDeAtendimento.length) {
+        console.log(
+          "Dia escolhido: ",
+          medico.disponibilidadeDeAtendimento[indice].dia
+        );
+        consultaAgendada.dia = medico.disponibilidadeDeAtendimento[indice].dia;
+        // verifica se o índice é válido
+        const horario = medico.disponibilidadeDeAtendimento[indice].horario;
+        escolherHoraDaConsulta(horario);
+      } else {
+        console.log("Número inválido. Tente novamente.");
+        escolherDiaDaConsulta(medico);
+      }
+    });
+  }
+  
+  
   
   
